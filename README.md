@@ -171,8 +171,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>숫자 야구 게임!</strong></td>
-      <td>콘솔에서 즐기는 간단한 숫자 게임</td>
+      <td><strong>숫자 야구 게임</strong></td>
+      <td>콘솔에서 즐기는 간단한 숫자 게임!</td>
       <td><code>Planning</code></td>
     </tr>
     <tr>
