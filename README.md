@@ -171,7 +171,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>숫자 야구 게임</strong></td>
+      <td><strong>숫자 야구 게임!</strong></td>
       <td>콘솔에서 즐기는 간단한 숫자 게임</td>
       <td><code>Planning</code></td>
     </tr>
@@ -182,7 +182,7 @@
     </tr>
     <tr>
       <td><strong>개인 블로그 API</strong></td>
-      <td>Spring Boot로 만드는 나만의 서버</td>
+      <td>Spring Boot로 만드는 나만의 서버!</td>
       <td><code>Dreaming ✨</code></td>
     </tr>
   </tbody>
