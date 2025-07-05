@@ -127,44 +127,63 @@ public class control7 {
                 // 2. 배열값이 합과 평균을 출력
                 // 3. 최대,최소 값 출력
 
-                int numm1[][] = new int[5][5];
+                System.out.print("배열 크기 입력 (1~5): ");
+                int size = sc.nextInt();
 
+                if (size < 1 || size > 5) {
+                    System.out.println("1~5 사이 숫자만 입력하세요.");
+                }
 
-//                String o_num = sc.nextLine();
+                int[][] arr = new int[size][size];
+                int[] nums = new int[30];
+                for (int i = 0; i < 30; i++) {
+                    nums[i] = i + 1;
+                }
 
-                for(int i=0; i<numm1.length; i++){
-                    for ( int j=0; j<numm1[i].length; j++){
-                        System.out.println("입력받으세요 :");
+                for (int k = 0; k < 100; k++) {
+                    int i = (int)(Math.random() * 30);
+                    int j = (int)(Math.random() * 30);
 
-                        numm1[i][j] = Integer.parseInt(sc.nextLine());
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+
+                int n = 0;
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
+                        arr[i][j] = nums[n];
+                        n++;
                     }
                 }
-                for(int i=0; i<numm1.length; i++){
-                    for(int j=0; j<numm1[i].length; j++){
-                        System.out.print(numm1[i][j] + "  ");
+
+                System.out.println("\n[배열 출력]");
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
+                        System.out.print(arr[i][j] + "\t");
                     }
                     System.out.println();
-
                 }
-                int sum = 0;
-                int min = numm1[0][0];
-                int max = numm1[0][0];
 
-                for (int i = 0; i < numm1.length; i++) {
-                    for (int j = 0; j < numm1[i].length; j++) {
-                        sum += numm1[i][j];
-                        if (numm1[i][j] < min) {
-                            min = numm1[i][j];
-                        }
-                        if (numm1[i][j] > max) {
-                            max = numm1[i][j];
-                        }
+                int sum = 0;
+                int min = arr[0][0];
+                int max = arr[0][0];
+
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
+                        int num = arr[i][j];
+                        sum += num;
+
+                        if (num < min) min = num;
+                        if (num > max) max = num;
                     }
                 }
-                double avg = (double) sum / (numm1.length * numm1[0].length);
-                System.out.println("\n--- 최종 결과 ---");
+
+                double avg = (double)sum / (size * size);
+
+                System.out.println("\n[결과]");
                 System.out.println("합계: " + sum);
-                System.out.println("평균: " + avg);
+                System.out.printf("평균: %.2f\n", avg);
                 System.out.println("최소값: " + min);
                 System.out.println("최대값: " + max);
             }
