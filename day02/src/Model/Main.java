@@ -6,7 +6,9 @@ public class Main {
         System.out.println();
 
         System.out.println("=== AlcoholicDrink 정보 ===");
+        //       [  변수 선언 ]          [ 객체 생성 및 초기화 ]
         AlcoholicDrink al = new AlcoholicDrink("테라", "하이트진로", "시원함", 500, 200, 2500, 4.5, "대한민국");
+        // 메서드 호출
         al.showInfo();
         al.drink();
         System.out.println();
